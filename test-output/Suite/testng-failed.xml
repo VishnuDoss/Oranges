@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <parameter name="os" value="Windows"/>
+  <parameter name="browser" value="Chrome"/>
+  <parameter name="url" value="https://orangehrm-demo-6x.orangehrmlive.com/auth/login"/>
+  <listeners>
+    <listener class-name="wrapperclasses.TestListener"/>
+  </listeners>
+  <test thread-count="5" parallel="tests" name="Tests1(failed)">
+    <parameter name="user" value="admin"/>
+    <classes>
+      <class name="testcases.LoginTest">
+        <methods>
+          <include name="browserClose"/>
+          <include name="browserinit"/>
+          <include name="Login"/>
+        </methods>
+      </class> <!-- testcases.LoginTest -->
+    </classes>
+  </test> <!-- Tests1(failed) -->
+  <test thread-count="5" parallel="tests" name="Tests3(failed)">
+    <parameter name="user" value="kevin"/>
+    <classes>
+      <class name="testcases.LoginTest">
+        <methods>
+          <include name="browserClose"/>
+          <include name="browserinit"/>
+          <include name="Login"/>
+        </methods>
+      </class> <!-- testcases.LoginTest -->
+    </classes>
+  </test> <!-- Tests3(failed) -->
+  <test thread-count="5" parallel="tests" name="Tests4(failed)">
+    <parameter name="user" value="linda"/>
+    <classes>
+      <class name="testcases.LoginTest">
+        <methods>
+          <include name="browserClose"/>
+          <include name="browserinit"/>
+          <include name="Login" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- testcases.LoginTest -->
+    </classes>
+  </test> <!-- Tests4(failed) -->
+</suite> <!-- Failed suite [Suite] -->
